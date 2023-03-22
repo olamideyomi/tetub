@@ -25,13 +25,16 @@ body{
   background-size: cover;
 }
 .imges{
-  width: 5vh; 
-  height: 5vh; 
-  max-width: 10%;
-  max-width: 10%;
-  margin: 0 auto;
-  padding-left: 30%;
   animation: bounce 3s infinite;
+
+}
+.imges img{
+  width: 40%;
+  height: 80%;
+  display: flex;
+  float: right;
+  margin-top: 5%;
+  margin-right: 2%;
 
 }
 
@@ -39,8 +42,8 @@ body{
   0% {
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-19px);
+  70% {
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(8);
@@ -78,4 +81,52 @@ nav .hamb{
   background: #fff;
   position: absolute;
   cursor: pointer;
+  display: none;
+}
+
+nav .hamb span{
+  display: block;
+  background-color: #2eec71;
+  width: 100%;
+  height: 3px;
+  transition-property: transform,opacity ;
+}
+nav .hamb span:nth-child(2){
+  margin: 7px 0px;
+}
+nav .nav-list{
+  list-style: none;
+}
+nav .nav-list li{
+  display: inline-block;
+}
+
+nav .nav-list li a{
+  color: #eee;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+nav .nav-list li:not(:last-child) a:hover{
+  color: #2eec71;
+  transition: all 0.3s ease;
+}
+
+nav .nav-list li.btn a{
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #2eec71;
+  padding: 9px 28px;
+  border-radius: 30px;
+  line-height: 1.3;
+  color: #2eec71;
+  font-weight: 500;
+}
+
+nav .nav-list li.btn a:hover{
+  background: #2eec71;
+  color: #fff;
+  transition: all 0.3s ease;
 }
